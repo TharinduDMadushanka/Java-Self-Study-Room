@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+
+     /*   Employee e1=new Employee();
+
+            System.out.println(e1.department); //null
+            System.out.println(e1.name); //null
+            System.out.println(e1.age); // 0
+    */
+
+        Employee e1 =new Employee();//Default  constructor
+        System.out.println(e1.department+" "+e1.age+" "+e1.name );
+
+        Employee e2 =new Employee("Nimal",30,"Cleaning");//Parameterize constructor
+        System.out.println(e2.department+" "+e2.age+" "+e2.name );
+
+
+    }
+}
