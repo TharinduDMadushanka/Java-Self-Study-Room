@@ -1,0 +1,14 @@
+** Narrow casting ---> big -> small manually
+
+[1] class Example{
+	public static void main(String args[]){
+		short s = 100;
+		byte b;
+		//b = s; // Illegal
+
+		b = (byte) s; // Assign last 8 bits of s to b
+		// Narrow Casting
+
+		System.out.println(s + " " + b);
+	}
+}

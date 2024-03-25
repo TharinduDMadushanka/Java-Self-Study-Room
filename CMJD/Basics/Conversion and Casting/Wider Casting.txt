@@ -1,0 +1,26 @@
+** Wider casting ---> small->big maually
+
+[1] class Example{
+	public static void main(String args[]){
+		int total = 894;
+		int subject = 10;
+
+		double average;
+
+		average = total/subject;
+		System.out.println(average); // prints 89.0
+
+		average = (double)total/ subject; 
+		System.out.println(average); // prints 89.4
+
+		average = total/ (double)subject; 
+		System.out.println(average); // prints 89.4
+
+		average = (double)total/ (double)subject; 
+		System.out.println(average); // prints 89.4
+
+		average = (double) (total/subject);
+		System.out.println(average); // prints 89.0
+
+	}
+}

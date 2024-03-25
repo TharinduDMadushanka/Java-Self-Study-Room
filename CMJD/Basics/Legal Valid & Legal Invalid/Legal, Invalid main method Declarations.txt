@@ -1,0 +1,25 @@
+** They compiled without any error bt it brings RUNTIME ERRORS
+
+[1] class Example{
+	public static void main(){ ----> ** miss (String [] args)
+		System.out.println("Hello Java");
+	}
+} 
+
+[2] class Example{
+	public static void main(String args){ ----> ** miss [] brackets
+		System.out.println("Hello Java");
+	}
+} 
+
+[3] class Example{
+	static void main(String args[]){ ----> ** miss public key word
+		System.out.println("Hello Java");
+	}
+}
+
+[4] class Example{
+	public static void Main(String args[]){ ---->** main method declere as "Main"(capital M) 
+		System.out.println("Hello Java");
+	}
+} 

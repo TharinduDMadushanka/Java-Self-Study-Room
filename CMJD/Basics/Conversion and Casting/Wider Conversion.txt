@@ -1,0 +1,20 @@
+**Wider conversion --> samall -> big automatocally
+
+[1] class Example{
+	public static void main(String args[]){
+		byte b = 100; // 8 bits
+		short s; // 16 bits
+		s = b; // Legal, Wider Conversion
+
+		System.out.println(b + " " + s); // 100 100
+	}
+}
+
+[2] class Example{
+	public static void main(String args[]){
+		byte b = 100; // 8 bits
+		short s = 200; // 16 bits
+		
+		System.out.println(b + s); // Legal, Convert to a 16 bits short and Arithmetic add --> Wider Conversion 
+	}
+}

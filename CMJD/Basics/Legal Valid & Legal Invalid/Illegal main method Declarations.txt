@@ -1,0 +1,13 @@
+** they didn't compile beacuse it brings COMPILE ERRORS
+
+[1] class Example{
+	public void static main(String args[]){ ---->**we cant change void keyword location
+		System.out.println("Hello Java");
+	}
+} 
+
+[2] class Example{
+	public static void main(string args[]){ ---->** String "S" must be capital beacuse string is a class
+		System.out.println("Hello Java");
+	}
+}

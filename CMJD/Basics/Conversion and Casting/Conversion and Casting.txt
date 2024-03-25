@@ -1,0 +1,30 @@
+**Casting --->maunally
+**Conversion--->Automatically
+
+class Example{
+	public static void main(String args[]){
+		short s = 100;
+		int x = 100;
+		long y = 100;
+		float f = 100.0f;
+		double d = 100.0;
+
+		//s = x; // Illegal 
+		//x = y; // Illegal	 ---> we cand assing small data types to big data types
+		//y = f; // Illegal
+		//f = d; // Illegal
+
+		d = s;
+		d = y;
+		d = x;
+		d = f;
+
+		f = s;
+		f = x;  ----> Legal we can assing big data types to small data types
+		f = y;
+
+		y = s;
+		y = x;
+
+		x = s;
+	}
