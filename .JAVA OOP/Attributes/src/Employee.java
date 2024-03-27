@@ -1,3 +1,4 @@
+//Attributes in Java can be of any data type, including primitive types (like int , double , boolean ) and reference types (like String , arrays, or other objects)
 public class Employee {
     String name; // Instance variable
     int age;
