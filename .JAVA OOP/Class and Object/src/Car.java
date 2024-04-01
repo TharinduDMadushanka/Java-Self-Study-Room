@@ -10,6 +10,7 @@ public class Car {
     // instance methods
     public void speed(){
         System.out.println(speed);
+
     }
     public  void color(){
         System.out.println(color);

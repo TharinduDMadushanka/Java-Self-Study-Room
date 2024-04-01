@@ -1,4 +1,4 @@
-//Final ----> we can change after final
+//Final ----> we cant change after final
 
 public class Main {
     public static void main(String[] args) {

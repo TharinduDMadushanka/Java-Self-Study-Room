@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/.JAVA OOP.iml" filepath="$PROJECT_DIR$/.idea/.JAVA OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Access Modifiers/Access Modifiers.iml" filepath="$PROJECT_DIR$/Access Modifiers/Access Modifiers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Attributes/Attributes.iml" filepath="$PROJECT_DIR$/Attributes/Attributes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Class and Object/Class and Object.iml" filepath="$PROJECT_DIR$/Class and Object/Class and Object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Constructor Overloading/Constructor Overloading.iml" filepath="$PROJECT_DIR$/Constructor Overloading/Constructor Overloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Constructors/Constructors.iml" filepath="$PROJECT_DIR$/Constructors/Constructors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Final Keyword/Final Keyword.iml" filepath="$PROJECT_DIR$/Final Keyword/Final Keyword.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Getters and Setters/Getters and Setters.iml" filepath="$PROJECT_DIR$/Getters and Setters/Getters and Setters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Abstract/Java Abstract.iml" filepath="$PROJECT_DIR$/Java Abstract/Java Abstract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Encapsulation/Java Encapsulation.iml" filepath="$PROJECT_DIR$/Java Encapsulation/Java Encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Inheritance/Java Inheritance.iml" filepath="$PROJECT_DIR$/Java Inheritance/Java Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Interface/Java Interface.iml" filepath="$PROJECT_DIR$/Java Interface/Java Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Method Overriding/Java Method Overriding/Java Method Overriding.iml" filepath="$PROJECT_DIR$/Java Method Overriding/Java Method Overriding/Java Method Overriding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Rectangle Class Example/Java Rectangle Class Example.iml" filepath="$PROJECT_DIR$/Java Rectangle Class Example/Java Rectangle Class Example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Static/Java Static.iml" filepath="$PROJECT_DIR$/Java Static/Java Static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Super Keyword/Java Super Keyword.iml" filepath="$PROJECT_DIR$/Java Super Keyword/Java Super Keyword.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Method Overloading/Method Overloading.iml" filepath="$PROJECT_DIR$/Method Overloading/Method Overloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java Method Overriding/Parent/Parent.iml" filepath="$PROJECT_DIR$/Java Method Overriding/Parent/Parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Polymorphism - Dynamic Method Dispatch/Polymorphism - Dynamic Method Dispatch.iml" filepath="$PROJECT_DIR$/Polymorphism - Dynamic Method Dispatch/Polymorphism - Dynamic Method Dispatch.iml" />
+    </modules>
+  </component>
+</project>
