@@ -50,5 +50,5 @@ class Book {
         this.author = author;
         this.price = price;
     }
-   
+
 }
