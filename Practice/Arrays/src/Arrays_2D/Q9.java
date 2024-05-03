@@ -11,6 +11,8 @@ public class Q9 {
         int[][] integers = {{1, 10, 3, 8}, {9, 12, 6, 7}, {5, 2, 11, 4}};
 
         int maxSum = 0;
+        //int max = Integer.MIN_VALUE; // Initialize min with the largest possible integer value
+
 
         for (int i = 0; i < integers.length; i++) {
             int sum = 0;
