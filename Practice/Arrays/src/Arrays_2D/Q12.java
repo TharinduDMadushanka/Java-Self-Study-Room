@@ -1,5 +1,10 @@
 package Arrays_2D;
 
+/**
+ * Column with Minimum Sum
+ * Write a Java program to find the column with the minimum sum of elements in a 2D integer array.
+ */
+
 public class Q12 {
     public static void main(String[] args) {
 
