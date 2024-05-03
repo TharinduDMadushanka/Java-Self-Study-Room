@@ -1,7 +1,7 @@
 package Arrays_2D;
 
 // Get sum of each row
-//Get sum of each column
+
 
 public class Q1 {
     public static void main(String[] args) {
