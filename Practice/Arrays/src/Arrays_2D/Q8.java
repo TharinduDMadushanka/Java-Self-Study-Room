@@ -21,10 +21,8 @@ public class Q8 {
             }
             System.out.println("The maximum number of row "+(i+1)+" :\t" + max);
 
-            for (int z=0;z<integers.length;z++){
-                if (all<max){
-                    all=max;
-                }
+            if (all<max){
+                all=max;
             }
         }
         System.out.println("Max element :"+all);
