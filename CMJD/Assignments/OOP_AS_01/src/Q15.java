@@ -1,32 +1,42 @@
 public class Q15 {
     public static void main(String[] args) {
 
+        Rectangle r1=new Rectangle(10,15);
+        r1.calcArea();
     }
 }
 
 class Rectangle{
 
-    private int length=1;
-    private int width=2;
+    private double length=1.0;
+    private double width=2;
 
-    Rectangle(int length, int width){
+    Rectangle(double length, double width){
         this.length=length;
         this.width=width;
     }
 
-    public int getLength() {
+    public double getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(double length) {
         this.length = length;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(double width) {
         this.width = width;
+    }
+
+    public void calcArea(){
+        if (length>0.0 && width<20.0){
+            double area=width*length;
+
+            System.out.println(area);
+        }
     }
 }
