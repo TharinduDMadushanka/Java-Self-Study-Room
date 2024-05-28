@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class AnotherBorderLayoutWindow {
+public class Q3 {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Border Layout Window");
         frame.setSize(400, 200);
