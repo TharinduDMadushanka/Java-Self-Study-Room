@@ -1,3 +1,6 @@
+/**
+ * Q22
+ */
 
 import java.awt.*;
 import javax.swing.*;
@@ -19,7 +22,7 @@ class Q17 extends JFrame {
     }
 }
 
-class Demo {
+class Q18 {
     public static void main(String args[]) {
         new MyFrame().setVisible(true);
     }
