@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class GridLayoutExample {
+public class Q8 {
     public static void main(String[] args) {
         JFrame frame = new JFrame("GridLayout Example");
         frame.setSize(300, 200);
