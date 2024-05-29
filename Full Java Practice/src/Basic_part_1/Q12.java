@@ -9,6 +9,8 @@ public class Q12 {
     public static void main(String[] args) {
         Scanner input =new Scanner(System.in);
 
+        System.out.print("Enter a string:");
+
         char[] letter =input.next().toCharArray();
 
         System.out.println("Reverse string: ");
