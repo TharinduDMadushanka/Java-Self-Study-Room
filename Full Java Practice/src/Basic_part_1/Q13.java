@@ -24,11 +24,11 @@ public class Q13 {
         int others =0;
 
         for (int i=0;i< arr.length;i++) {
-            if (Character.isLetter(arr[i])){
+            if (Character.isLetter(arr[i])){ // check letters
                 letters++;
-            } else if (Character.isDigit(arr[i])) {
+            } else if (Character.isDigit(arr[i])) { // check numbers
                 nb++;
-            }else if (Character.isWhitespace(arr[i])){
+            }else if (Character.isWhitespace(arr[i])){ // check whitespaces
                 whitespace++;
             }else {
                 others++;
