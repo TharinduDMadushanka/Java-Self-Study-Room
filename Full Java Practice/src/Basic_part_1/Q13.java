@@ -13,6 +13,9 @@ public class Q13 {
         String x=input.nextLine();
         //Aa kiu, I swd skieo 236587. GH kiu: sieo?? 25.33
 
+        count(x);
+    }
+    public static void count(String x){
         char [] arr =x.toCharArray();
 
         int letters =0;
@@ -20,7 +23,7 @@ public class Q13 {
         int whitespace=0;
         int others =0;
 
-        for (int i=0;i< args.length;i++) {
+        for (int i=0;i< arr.length;i++) {
             if (Character.isLetter(arr[i])){
                 letters++;
             } else if (Character.isDigit(arr[i])) {
@@ -36,6 +39,5 @@ public class Q13 {
         System.out.println("Digits: "+nb);
         System.out.println("Spaces: "+whitespace);
         System.out.println("Other characters: "+others);
-
     }
 }
