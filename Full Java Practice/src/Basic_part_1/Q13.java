@@ -11,13 +11,13 @@ public class Q13 {
 
         System.out.print("Enter string:");
 
-        char [] letter =input.nextLine().toCharArray();
+        char [] arr =input.nextLine().toCharArray();
 
-        int count =0;
+        int letters =0;
 
-        for (int i= letter.length-1;i>=0;i--){
-            count++;
+        for (int i= arr.length-1;i>=0;i--){
+            letters++;
         }
-        System.out.println(count);
+        System.out.println(letters);
     }
 }
