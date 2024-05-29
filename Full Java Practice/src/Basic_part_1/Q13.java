@@ -10,8 +10,10 @@ public class Q13 {
         Scanner input =new Scanner(System.in);
 
         System.out.print("Enter string:");
+        String x=input.nextLine();
+        //Aa kiu, I swd skieo 236587. GH kiu: sieo?? 25.33
 
-        char [] arr =input.nextLine().toCharArray();
+        char [] arr =x.toCharArray();
 
         int letters =0;
         int nb=0;
