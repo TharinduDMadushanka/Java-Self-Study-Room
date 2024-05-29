@@ -9,7 +9,7 @@ public class Q14 {
 
         for (int i=0;i<4;i++){
             for (int j=1;j<4;j++){
-                for (int k=1;k<4;k++){
+                for (int k=1;k<4;k++){// Check if 'i,' 'j,' and 'k' are all different (not equal)
                     if (k!=i && k!=j && i!=j){
                         amount++;
                         System.out.println(i+" "+j+" "+k);
