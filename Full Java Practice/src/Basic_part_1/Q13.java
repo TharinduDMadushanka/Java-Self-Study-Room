@@ -14,10 +14,18 @@ public class Q13 {
         char [] arr =input.nextLine().toCharArray();
 
         int letters =0;
+        int nb=0;
+        int whitespace=0;
+        int others =0;
 
-        for (int i= arr.length-1;i>=0;i--){
-            letters++;
+        for (int i=0;i< args.length;i++) {
+            if (Character.isLetter(arr[i])){
+                letters++;
+            } else if (Character.isDigit(arr[i])) {
+                nb++;
+            }else if (Character.isWhitespace(arr[i])){
+
+            }
         }
-        System.out.println(letters);
     }
 }
