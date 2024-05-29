@@ -18,5 +18,6 @@ public class Q12 {
         for (int i=letter.length-1;i<0;i--){
             System.out.print(letter[i]);
         }
+        System.out.println();
     }
 }
