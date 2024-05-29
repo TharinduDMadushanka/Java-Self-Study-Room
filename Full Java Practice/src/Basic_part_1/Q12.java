@@ -11,7 +11,7 @@ public class Q12 {
 
         System.out.print("Enter a string:");
 
-        char[] letter =input.next().toCharArray();
+        char[] letter =input.nextLine().toCharArray();
 
         System.out.println("Reverse string: ");
 
