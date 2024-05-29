@@ -24,8 +24,16 @@ public class Q13 {
             } else if (Character.isDigit(arr[i])) {
                 nb++;
             }else if (Character.isWhitespace(arr[i])){
-
+                whitespace++;
+            }else {
+                others++;
             }
         }
+
+        System.out.println("Letters: "+letters);
+        System.out.println("Digits: "+nb);
+        System.out.println("Spaces: "+whitespace);
+        System.out.println("Other characters: "+others);
+
     }
 }
