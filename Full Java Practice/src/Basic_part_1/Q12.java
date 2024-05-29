@@ -15,7 +15,7 @@ public class Q12 {
 
         System.out.println("Reverse string: ");
 
-        for (int i=letter.length-1;i<0;i--){
+        for (int i=letter.length-1;i>=0;i--){
             System.out.print(letter[i]);
         }
         System.out.println();
