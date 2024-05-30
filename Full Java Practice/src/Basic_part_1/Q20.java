@@ -7,14 +7,15 @@ public class Q20 {
         Scanner input =new Scanner(System.in);
         int[] arr =new int[5];
 
-        System.out.println("Enter 5 numbers for array:");
+        System.out.println("Enter 5 numbers for array");
 
         for (int i=0;i<5;i++){
-            System.out.println("Enter nb "+(i+1)+":");
+            System.out.print("Enter nb "+(i+1)+":");
             arr[i]=input.nextInt();
         }
-        for (int a:arr){
-            System.out.print(arr[a]+", ");
+
+        for (int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+", ");
         }
     }
 }
