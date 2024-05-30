@@ -8,6 +8,8 @@ public class Q22 {
         for (int i=0;i<arr1.length;i++) {
             if (arr1[i]==arr2[i]){
                 System.out.println("same");
+            }else {
+                System.out.println("wrong");
             }
         }
     }
