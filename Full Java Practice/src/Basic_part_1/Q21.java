@@ -1,4 +1,7 @@
 package Basic_part_1;
+/**
+ * Q74
+ */
 
 import java.util.Scanner;
 
