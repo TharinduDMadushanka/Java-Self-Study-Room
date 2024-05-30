@@ -19,7 +19,7 @@ public class Q21 {
         }
 
         if (arr[0]==arr[arr.length-1]){
-            System.out.println("true");
+            System.out.println("\ntrue");
         }
 
     }
