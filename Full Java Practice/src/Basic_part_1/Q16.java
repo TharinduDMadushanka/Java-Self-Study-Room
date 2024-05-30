@@ -1,7 +1,10 @@
 package Basic_part_1;
 
 import java.io.Console;
-import java.util.Scanner;
+
+/**
+ * Write a Java program to input and display your password.
+ */
 
 public class Q16 {
     public static void main(String[] args) {
