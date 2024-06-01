@@ -14,6 +14,7 @@ public class Q1 {
 
         Animal a2=new Cat();
         a2.makeSound();// call Cat class method
+        a1.makeSound();// call Animal class method
 
         /**
         Cat c2 =new Animal(); --> cant create object by super class
