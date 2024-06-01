@@ -76,7 +76,7 @@ class SavingsAccount extends BankAccount{
         if (getBalance() -amount<100){
             System.out.println("Minimum balance of 100 required");
         }else {
-            withdraw(amount);
+            super.withdraw(amount);
         }
     }
 }
