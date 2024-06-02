@@ -45,13 +45,29 @@ abstract class Vehicle{
 
 }
 class Truck extends Vehicle{
-    private double capacity;
-    public Truck(String make,String model,int year,String fuelType,double fuelEfficiency,double capacity){
+    private double cargoCapacity;
+    public Truck(String make,String model,int year,String fuelType,double fuelEfficiency,double cargoCapacity){
         super(make, model, year, fuelType, fuelEfficiency);
-        this.capacity=capacity;
+        this.cargoCapacity=cargoCapacity;
+    }
+
+    public double getCargoCapacity(){
+        return cargoCapacity;
+    }
+    public double calculateFuelEfficiency(){
+        return getFuelEfficiency()*(1.0 / (1.0 + (getCargoCapacity() / 1000.0)));
+    }
+    public  double calculateDistanceTravelled(){
+        return calculateFuelEfficiency() * getFuelEfficiency();
+    }
+    public  double getMaxSpeed(){
+        return 80.0;
     }
 }
 
-class Car{}
+class Car extends Vehicle{
+
+    public Car()
+}
 
 class MotorCycle{}
