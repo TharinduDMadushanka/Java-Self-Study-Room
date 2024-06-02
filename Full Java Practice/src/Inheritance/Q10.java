@@ -80,4 +80,16 @@ class Developer extends Employee{
     public String getProgrammingLanguage(){
         return programmingLanguage;
     }
+    public double calculateBonus() {
+        // Default implementation for bonus calculation
+        return getSalary()*0.10;
+    }
+
+    public String generatePerformanceReport() {
+        // Default implementation for performance report
+        return "performance report for developer "+getName();
+    }
+    public void writeCode(){
+        System.out.println("Developer "+getName()+" is writing code using "+programmingLanguage);
+    }
 }
