@@ -17,9 +17,13 @@ public class Q10 {
         System.out.println("Developer's bonus: "+developer.calculateBonus());
         System.out.println("Programmer's bonus: "+programmer.calculateBonus());
 
+        System.out.println();
+
         System.out.println(manager.generatePerformanceReport());
         System.out.println(developer.generatePerformanceReport());
         System.out.println(programmer.generatePerformanceReport());
+
+        System.out.println();
 
         manager.manageProject();
         developer.writeCode();
