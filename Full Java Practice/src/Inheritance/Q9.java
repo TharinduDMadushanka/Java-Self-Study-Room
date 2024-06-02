@@ -24,7 +24,24 @@ abstract class Vehicle{
         this.fuelEfficiency=fuelEfficiency;
     }
 
-    public
+    public String getMake(){
+        return make;
+    }
+    public String getModel(){
+        return model;
+    }
+    public int getYear(){
+        return year;
+    }
+    public String getFuelType(){
+        return fuelType;
+    }
+    public double getFuelEfficiency(){
+        return fuelEfficiency;
+    }
+    public abstract double calculateFuelEfficiency();
+    public abstract double calculateDistanceTravelled():
+    public abstract double getMaxSpeed();
 
 }
 class Truck{}
