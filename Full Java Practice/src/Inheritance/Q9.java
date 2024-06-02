@@ -10,7 +10,21 @@ public class Q9 {
     }
 }
 abstract class Vehicle{
-    private
+    private String make;
+    private String model;
+    private int year;
+    private String fuelType;
+    private double fuelEfficiency;
+
+    public Vehicle(String make,String model,int year,String fuelType,double fuelEfficiency){
+        this.make=make;
+        this.model=model;
+        this.year=year;
+        this.fuelType=fuelType;
+        this.fuelEfficiency=fuelEfficiency;
+    }
+
+    public
 
 }
 class Truck{}
