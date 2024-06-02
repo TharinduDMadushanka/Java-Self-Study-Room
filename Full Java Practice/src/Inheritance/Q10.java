@@ -57,4 +57,27 @@ class Manager extends Employee{
         return numberOfSubordinates;
     }
 
+    public double calculateBonus() {
+        // Default implementation for bonus calculation
+        return getSalary()*0.15;
+    }
+
+    public String generatePerformanceReport() {
+        // Default implementation for performance report
+        return "performance report for manager "+getName();
+    }
+    public void manageProject(){
+        System.out.println("Manager "+getName()+" is managing a project.");
+    }
+}
+class Developer extends Employee{
+    private String programmingLanguage;
+
+    public Developer(String name,String address,double salary,String jobTitle, String programmingLanguage){
+        super(name, address, salary, jobTitle);
+        this.programmingLanguage=programmingLanguage;
+    }
+    public String getProgrammingLanguage(){
+        return programmingLanguage;
+    }
 }
