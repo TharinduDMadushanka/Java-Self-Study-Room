@@ -9,3 +9,12 @@ public class Q9 {
 
     }
 }
+abstract class Vehicle{
+    private
+
+}
+class Truck{}
+
+class Car{}
+
+class MotorCycle{}
