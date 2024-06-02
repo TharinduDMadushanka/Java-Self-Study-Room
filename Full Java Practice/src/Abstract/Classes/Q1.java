@@ -7,20 +7,35 @@ package Abstract.Classes;
 public class Q1 {
     public static void main(String[] args) {
 
-        Lion l=new Lion();
+        Lion l = new Lion();
         l.sound();
+
+        Tiger t = new Tiger();
+        t.sound();
+
+        Animal a=new Animal() { // if we create abstract class obj we should override all methods
+            @Override
+            public void sound() {
+                System.out.println("Animal make sounds");
+            }
+        };
+        a.sound();
     }
 }
-abstract class Animal{
+
+abstract class Animal {
     public abstract void sound();
+    //public abstract void eat();
 }
-class Lion extends Animal{
-    public void sound(){
+
+class Lion extends Animal {
+    public void sound() {
         System.out.println("Lion roars!");
     }
 }
-class Tiger extends Animal{
-    public void sound(){
+
+class Tiger extends Animal {
+    public void sound() {
         System.out.println("Tiger growls!");
     }
 }
