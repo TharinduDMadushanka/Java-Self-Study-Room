@@ -7,6 +7,12 @@ package Abstract.Classes;
 public class Q3 {
     public static void main(String[] args) {
 
+        SavingAccount s =new SavingAccount("111",1000);
+        System.out.println("Balance "+s.getBalance());
+        s.deposit(500);
+        s.withdraw(200);
+
+        System.out.println();
     }
 }
 abstract class BankAccount{
