@@ -90,4 +90,23 @@ class Car extends Vehicle{
 
 class MotorCycle extends Vehicle{
 
+    private double engineDisplacement;
+
+    public MotorCycle(String make,String model,int year,String fuelType,double fuelEfficiency,double engineDisplacement){
+        super(make, model, year, fuelType, fuelEfficiency);
+        this.engineDisplacement=engineDisplacement;
+    }
+    public double getEngineDisplacement(){
+        return engineDisplacement;
+    }
+
+    public  double calculateFuelEfficiency(){
+        return getFuelEfficiency() * (1.0 / (1.0 + (getEngineDisplacement() / 1000.0)))
+    }
+    public  double calculateDistanceTravelled(){
+        return calculateFuelEfficiency() * getFuelEfficiency();
+    }
+    public  double getMaxSpeed(){
+        return 80.0;
+    }
 }
