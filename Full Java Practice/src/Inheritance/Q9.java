@@ -76,6 +76,18 @@ class Car extends Vehicle{
     public int getNumSeats(){
         return numSeats;
     }
+
+    public  double calculateFuelEfficiency(){
+        return getFuelEfficiency() * (1.0 / (1.0 + (getNumSeats() / 5.0)));
+    }
+    public  double calculateDistanceTravelled(){
+        return calculateFuelEfficiency() * getFuelEfficiency();
+    }
+    public  double getMaxSpeed(){
+        return 120.0;
+    }
 }
 
-class MotorCycle{}
+class MotorCycle extends Vehicle{
+
+}
