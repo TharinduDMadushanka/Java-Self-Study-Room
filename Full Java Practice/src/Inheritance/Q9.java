@@ -40,11 +40,17 @@ abstract class Vehicle{
         return fuelEfficiency;
     }
     public abstract double calculateFuelEfficiency();
-    public abstract double calculateDistanceTravelled():
+    public abstract double calculateDistanceTravelled();
     public abstract double getMaxSpeed();
 
 }
-class Truck{}
+class Truck extends Vehicle{
+    private double capacity;
+    public Truck(String make,String model,int year,String fuelType,double fuelEfficiency,double capacity){
+        super(make, model, year, fuelType, fuelEfficiency);
+        this.capacity=capacity;
+    }
+}
 
 class Car{}
 
