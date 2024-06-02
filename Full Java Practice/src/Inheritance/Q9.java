@@ -7,6 +7,9 @@ package Inheritance;
 public class Q9 {
     public static void main(String[] args) {
 
+        Truck truck=new Truck("Tatra", "Tatra 810 4x4", 2020, "GASOLINE", 8.112, 4.5);
+        Car car = new Car("Volkswagen", "Virtus", 2019, "HYBRID", 6.123, 8);
+        Motorcycle motorcycle = new Motorcycle("Massimo Motor", "Warrior200", 2018, "GASOLINE", 2.1);
     }
 }
 abstract class Vehicle{
@@ -88,20 +91,20 @@ class Car extends Vehicle{
     }
 }
 
-class MotorCycle extends Vehicle{
+class Motorcycle extends Vehicle{
 
     private double engineDisplacement;
 
-    public MotorCycle(String make,String model,int year,String fuelType,double fuelEfficiency,double engineDisplacement){
+    public Motorcycle(String make,String model,int year,String fuelType,double fuelEfficiency){
         super(make, model, year, fuelType, fuelEfficiency);
-        this.engineDisplacement=engineDisplacement;
+        //this.engineDisplacement=engineDisplacement;
     }
     public double getEngineDisplacement(){
         return engineDisplacement;
     }
 
     public  double calculateFuelEfficiency(){
-        return getFuelEfficiency() * (1.0 / (1.0 + (getEngineDisplacement() / 1000.0)))
+        return getFuelEfficiency() * (1.0 / (1.0 + (getEngineDisplacement() / 1000.0)));
     }
     public  double calculateDistanceTravelled(){
         return calculateFuelEfficiency() * getFuelEfficiency();
