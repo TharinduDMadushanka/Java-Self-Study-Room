@@ -93,3 +93,20 @@ class Developer extends Employee{
         System.out.println("Developer "+getName()+" is writing code using "+programmingLanguage);
     }
 }
+class Programmer extends Developer{
+    public Programmer(String name,String address,double salary,String jobTitle,String programmingLanguage){
+        super(name, address, salary, "Programmer",programmingLanguage);
+    }
+    public double calculateBonus() {
+        // Default implementation for bonus calculation
+        return getSalary()*0.12;
+    }
+
+    public String generatePerformanceReport() {
+        // Default implementation for performance report
+        return "performance report for programmer "+getName();
+    }
+    public void debugCode(){
+        System.out.println("Programmer "+getName()+" is debugging code in "+getProgrammingLanguage());
+    }
+}
