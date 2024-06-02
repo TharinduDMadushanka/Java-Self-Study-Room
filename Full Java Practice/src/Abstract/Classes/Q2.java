@@ -10,6 +10,13 @@ public class Q2 {
         Circle c=new Circle(7);
         System.out.println("Circle area: "+c.calcArea());
         System.out.println("Circle perimeter: "+c.calcPerimeter());
+
+        System.out.println();
+
+        Triangle t=new Triangle(4,8,10);
+        System.out.println("Triangle area: "+t.calcArea());
+        System.out.println("Triangle perimeter: "+t.calcPerimeter());
+
     }
 }
 abstract class Shape{
