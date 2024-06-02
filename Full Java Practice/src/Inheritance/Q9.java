@@ -66,8 +66,16 @@ class Truck extends Vehicle{
 }
 
 class Car extends Vehicle{
+    private int numSeats;
 
-    public Car()
+    public Car(String make,String model,int year,String fuelType,double fuelEfficiency,int numSeats){
+        super(make, model, year, fuelType, fuelEfficiency);
+        this.numSeats=numSeats;
+    }
+
+    public int getNumSeats(){
+        return numSeats;
+    }
 }
 
 class MotorCycle{}
