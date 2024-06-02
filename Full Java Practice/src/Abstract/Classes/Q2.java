@@ -7,6 +7,9 @@ package Abstract.Classes;
 public class Q2 {
     public static void main(String[] args) {
 
+        Circle c=new Circle(7);
+        System.out.println("Circle area: "+c.calcArea());
+        System.out.println("Circle perimeter: "+c.calcPerimeter());
     }
 }
 abstract class Shape{
