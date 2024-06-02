@@ -9,6 +9,22 @@ package Inheritance;
 public class Q10 {
     public static void main(String[] args) {
 
+        Manager manager=new Manager("Tharindu","Galle",10000,"Manager",5);
+        Developer developer=new Developer("Dilshan","Matara",20000,"Developer","Java");
+        Programmer programmer=new Programmer("Madushanka","Colombo",30000,"Python");
+
+        System.out.println("Manager's bonus: "+manager.calculateBonus());
+        System.out.println("Developer's bonus: "+developer.calculateBonus());
+        System.out.println("Programmer's bonus: "+programmer.calculateBonus());
+
+        System.out.println(manager.generatePerformanceReport());
+        System.out.println(developer.generatePerformanceReport());
+        System.out.println(programmer.generatePerformanceReport());
+
+        manager.manageProject();
+        developer.writeCode();
+        programmer.debugCode();
+
     }
 }
 class Employee{
@@ -94,7 +110,7 @@ class Developer extends Employee{
     }
 }
 class Programmer extends Developer{
-    public Programmer(String name,String address,double salary,String jobTitle,String programmingLanguage){
+    public Programmer(String name,String address,double salary,String programmingLanguage){
         super(name, address, salary, "Programmer",programmingLanguage);
     }
     public double calculateBonus() {
