@@ -36,4 +36,25 @@ class Employee{
     public String getJobTitle(){
         return jobTitle;
     }
+    public double calculateBonus() {
+        // Default implementation for bonus calculation
+        return 0.0;
+    }
+
+    public String generatePerformanceReport() {
+        // Default implementation for performance report
+        return "No performance report available.";
+    }
+}
+class Manager extends Employee{
+    private int numberOfSubordinates;
+
+    public Manager(String name,String address,double salary,String jobTitle,int numberOfSubordinates){
+        super(name, address, salary, jobTitle);
+        this.numberOfSubordinates=numberOfSubordinates;
+    }
+    public int getNumberOfSubordinates(){
+        return numberOfSubordinates;
+    }
+
 }
