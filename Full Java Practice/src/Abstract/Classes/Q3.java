@@ -13,6 +13,12 @@ public class Q3 {
         s.withdraw(200);
 
         System.out.println();
+
+        CurrentAccount c= new CurrentAccount("222",2000);
+        System.out.println("Balance "+c.getBalance());
+        c.deposit(1000);
+        //c.setBalance(700); //--> we can set balance in the method here
+        c.withdraw(500);
     }
 }
 abstract class BankAccount{
