@@ -29,6 +29,24 @@ abstract class BankAccount{
     public abstract void deposit(double amount);
     public abstract void withdraw(double amount);
 }
-class SavingAccount{
 
+class SavingAccount extends BankAccount{
+    public SavingAccount(String accNb,double balance){
+        super(accNb, balance);
+    }
+    @Override
+    public void deposit(double amount){
+        setBalance(getBalance()+amount);
+        System.out.println("Deposit of $" + amount + " successful. Current balance: $" + getBalance());
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        if (getBalance()>=amount){
+            setBalance(getBalance()-amount);
+            System.out.println("Withdrawal of $" + amount + " successful. Current balance: $" + getBalance());
+        }else {
+            System.out.println("Withdrawal failed");
+        }
+    }
 }
