@@ -1,33 +1,30 @@
 package Encapsulation;
 
 /**
- * From Q1
+ * Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance.
+ * Provide public getter and setter methods to access and modify these variables.
  */
 public class Q2 {
     public static void main(String[] args) {
 
-        Person p1 =new Person("Tharindu",21,"Sri Lanka");
+        BankAccount b= new BankAccount("a1",1000);
+        System.out.println("Acc nb: "+b.getAccNb());
+        System.out.println("Balance: "+b.getBalance());
 
-        System.out.println(p1.getName()+" "+p1.getAge()+" "+p1.getCountry());
     }
 }
-class Person{
-    private String name;
-    private int age;
-    private String country;
+class BankAccount{
+    private String accNb;
+    private double balance;
 
-    public Person(String name,int age,String country){
-        this.name=name;
-        this.age=age;
-        this.country=country;
+    public BankAccount(String accNb,double balance){
+        this.accNb=accNb;
+        this.balance=balance;
     }
-    public String getName(){
-        return name;
+    public String getAccNb(){
+        return accNb;
     }
-    public int getAge(){
-        return age;
-    }
-    public String getCountry(){
-        return country;
+    public double getBalance(){
+        return balance;
     }
 }
