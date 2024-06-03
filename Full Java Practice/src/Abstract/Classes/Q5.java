@@ -12,7 +12,7 @@ public class Q5 {
 
         m.displayInfo();
         System.out.println();
-        d.calcSalary();
+        d.displayInfo();
     }
 }
 abstract class Employee{
