@@ -9,3 +9,8 @@ public class Q1 {
 
     }
 }
+class Animal{
+    public void makeSound(){
+        System.out.println("Animal make sounds");
+    }
+}
