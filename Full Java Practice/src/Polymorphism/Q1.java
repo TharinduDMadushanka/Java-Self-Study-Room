@@ -14,3 +14,9 @@ class Animal{
         System.out.println("Animal make sounds");
     }
 }
+class Bird extends  Animal{
+    @Override
+    public void makeSound(){
+        System.out.println("Birds chirps");
+    }
+}
