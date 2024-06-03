@@ -7,6 +7,21 @@ package Abstract.Classes;
 public class Q4 {
     public static void main(String[] args) {
 
+        Lion1 l=new Lion1();
+        l.eat();
+        l.sleep();
+
+        System.out.println();
+
+        Tiger1 t =new Tiger1();
+        t.eat();
+        t.sleep();
+
+        System.out.println();
+
+        Dear d=new Dear();
+        d.eat();
+        d.sleep();
     }
 }
 abstract class Animal1{
