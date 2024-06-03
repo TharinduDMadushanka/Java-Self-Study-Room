@@ -7,6 +7,12 @@ package Abstract.Classes;
 public class Q5 {
     public static void main(String[] args) {
 
+        Manager m =new Manager("Tharindu",50000,1000);
+        Developer d =new Developer("Dilshan",100000,20,150);
+
+        m.displayInfo();
+        System.out.println();
+        d.calcSalary()
     }
 }
 abstract class Employee{
