@@ -7,6 +7,14 @@ package Polymorphism;
 public class Q1 {
     public static void main(String[] args) {
 
+        Animal a =new Animal();
+        Bird b =new Bird();
+        Cat c =new Cat();
+
+        a.makeSound();
+        b.makeSound();
+        c.makeSound();
+
     }
 }
 class Animal{
@@ -18,5 +26,11 @@ class Bird extends  Animal{
     @Override
     public void makeSound(){
         System.out.println("Birds chirps");
+    }
+}
+class Cat extends Animal{
+    @Override
+    public void makeSound(){
+        System.out.println("Meows");
     }
 }
