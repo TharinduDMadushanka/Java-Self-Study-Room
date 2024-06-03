@@ -17,4 +17,6 @@ abstract class Employee{
         this.name=name;
         this.baseSalary=baseSalary;
     }
+    public abstract double calcSalary();
+    public abstract void displayInfo();
 }
