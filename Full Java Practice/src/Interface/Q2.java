@@ -7,6 +7,9 @@ package Interface;
 public class Q2 {
     public static void main(String[] args) {
 
+        Dog d =new Dog();
+        d.bark();
+
     }
 }
 class Dog implements Animal{
