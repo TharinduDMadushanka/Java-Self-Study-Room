@@ -7,7 +7,13 @@ package Encapsulation;
 public class Q3 {
     public static void main(String[] args) {
 
-        Re
+        Rectangle r =new Rectangle();
+        r.setLength(10);
+        r.setWidth(5);
+
+        System.out.println("Length: "+r.getLength());
+        System.out.println("Width: "+r.getWidth());
+        System.out.println("Area: "+r.getArea());
     }
 }
 class Rectangle{
@@ -28,5 +34,8 @@ class Rectangle{
 
     public void setWidth(int width) {
         this.width = width;
+    }
+    public double getArea(){
+        return this.length*this.width;
     }
 }
