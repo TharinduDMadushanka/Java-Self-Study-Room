@@ -8,12 +8,11 @@ public class Q3 {
     public static void main(String[] args) {
 
         Circle c=new Circle(7);
-        c.calcArea();
+        System.out.println(c.calcArea());
         System.out.println();
 
         Rectangle r =new Rectangle(5);
-        r.calcArea();
-
+        System.out.println(r.calcArea());
     }
 }
 class Base{
