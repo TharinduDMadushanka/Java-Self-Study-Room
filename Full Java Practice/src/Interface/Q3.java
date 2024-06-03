@@ -9,3 +9,22 @@ public class Q3 {
 
     }
 }
+class Spacecraft implements Flyable{
+    @Override
+    public void fly_Obj() {
+        System.out.println("Space craft is flying..");
+    }
+}
+class Airplane implements Flyable{
+
+    @Override
+    public void fly_Obj() {
+        System.out.println("Airplane is flying..");
+    }
+}
+class Helicopter implements Flyable{
+    @Override
+    public void fly_Obj() {
+        System.out.println("Helicopter is flying");
+    }
+}
