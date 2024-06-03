@@ -6,6 +6,9 @@ package Encapsulation;
 public class Q2 {
     public static void main(String[] args) {
 
+        Person p1 =new Person("Tharindu",21,"Sri Lanka");
+
+        System.out.println(p1.getName()+" "+p1.getAge()+" "+p1.getCountry());
     }
 }
 class Person{
