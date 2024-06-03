@@ -7,6 +7,11 @@ package Interface;
 public class Q3 {
     public static void main(String[] args) {
 
+        Flyable [] flyingObjects={new Spacecraft(), new Airplane(), new Helicopter()};
+
+        for (Flyable obj: flyingObjects){
+            obj.fly_Obj();
+        }
     }
 }
 class Spacecraft implements Flyable{
@@ -25,6 +30,6 @@ class Airplane implements Flyable{
 class Helicopter implements Flyable{
     @Override
     public void fly_Obj() {
-        System.out.println("Helicopter is flying");
+        System.out.println("Helicopter is flying..");
     }
 }
