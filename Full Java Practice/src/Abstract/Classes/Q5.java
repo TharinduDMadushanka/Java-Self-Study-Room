@@ -40,3 +40,25 @@ class Manager extends Employee{
         System.out.println("Total Salary: $" + calcSalary());
     }
 }
+class Developer extends Employee{
+    private int overtimeHours;
+    private double hourlyRate;
+
+    public Developer(String name,double baseSalary,int overtimeHours,double hourlyRate){
+        super(name, baseSalary);
+        this.overtimeHours=overtimeHours;
+        this.hourlyRate=hourlyRate;
+    }
+    public double calcSalary(){
+        return baseSalary+(overtimeHours*hourlyRate);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Programmer Name: " + name);
+        System.out.println("Base Salary: $" + baseSalary);
+        System.out.println("Overtime Hours: " + overtimeHours);
+        System.out.println("Hourly Rate: $" + hourlyRate);
+        System.out.println("Total Salary: $" + calcSalary());
+    }
+}
