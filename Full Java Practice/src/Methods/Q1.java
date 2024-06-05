@@ -29,8 +29,6 @@ public class Q1 {
             small=nb2;
         } else if (nb3<small) {
             small=nb3;
-        }else {
-            System.out.println("Number are same value.");
         }
 
         System.out.println("Smallest nb is "+small);
