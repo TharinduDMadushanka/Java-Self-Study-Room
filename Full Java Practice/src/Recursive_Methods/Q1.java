@@ -12,8 +12,15 @@ public class Q1 {
         System.out.print("Enter a nb: ");
         int nb = input.nextInt();
 
-        for (int i=nb;i<0;i--){
-            System.out.print(nb+" x");
+        int result =calFactorial(nb);
+
+        System.out.println(result);
+    }
+    public static int calFactorial(int n){
+        if (n==0){
+            return 1;
         }
+
+        return n*calFactorial(n-1);
     }
 }
