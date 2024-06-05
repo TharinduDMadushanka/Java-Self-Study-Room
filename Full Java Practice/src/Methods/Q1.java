@@ -19,4 +19,16 @@ public class Q1 {
         System.out.print("Enter nb3: ");
         int nb3= input.nextInt();
     }
+    public static void findSmall(int nb1,int nb2,int nb3){
+
+        int small=nb1;
+
+        if (nb2<small){
+            small=nb2;
+        } else if (nb3<small) {
+            small=nb3;
+        }else {
+            System.out.println("Number are same value.");
+        }
+    }
 }
