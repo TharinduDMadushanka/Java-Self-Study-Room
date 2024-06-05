@@ -18,6 +18,8 @@ public class Q1 {
 
         System.out.print("Enter nb3: ");
         int nb3= input.nextInt();
+
+        findSmall(nb1,nb2,nb3);
     }
     public static void findSmall(int nb1,int nb2,int nb3){
 
