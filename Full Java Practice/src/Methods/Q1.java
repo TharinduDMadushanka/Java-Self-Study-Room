@@ -30,5 +30,7 @@ public class Q1 {
         }else {
             System.out.println("Number are same value.");
         }
+
+        System.out.println("Smallest nb is "+small);
     }
 }
