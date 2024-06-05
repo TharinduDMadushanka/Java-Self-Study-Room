@@ -21,6 +21,6 @@ public class Q1 {
             return 1;
         }
 
-        return n*calFactorial(n-1);
+        return n*calFactorial(n-1); // when n = 0 to loop
     }
 }
