@@ -25,4 +25,16 @@ class SavingsAccount implements Account {
         this.interestRate = interestRate;
     }
 
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        balance -= amount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
 }
