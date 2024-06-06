@@ -16,3 +16,13 @@ interface Account {
     void withdraw(double amount);
     double getBalance();
 }
+class SavingsAccount implements Account {
+    private double balance;
+    private double interestRate;
+
+    public SavingsAccount(double balance, double interestRate) {
+        this.balance = balance;
+        this.interestRate = interestRate;
+    }
+
+}
