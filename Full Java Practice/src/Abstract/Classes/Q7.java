@@ -21,3 +21,11 @@ class Car extends Vehicle {
         System.out.println("Car Engine Stopped");
     }
 }
+class Motorcycle extends Vehicle {
+    public void startEngine() {
+        System.out.println("Motorcycle Engine Started");
+    }
+    public void stopEngine() {
+        System.out.println("Motorcycle Engine Stopped");
+    }
+}
