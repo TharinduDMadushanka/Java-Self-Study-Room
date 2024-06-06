@@ -10,13 +10,13 @@ public class Q2 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter your first nb:");
+        System.out.print("Enter your first nb:");
         int nb1 = input.nextInt();
 
-        System.out.println("Enter your second nb:");
+        System.out.print("Enter your second nb:");
         int nb2 = input.nextInt();
 
-        System.out.println("Enter your third nb:");
+        System.out.print("Enter your third nb:");
         int nb3 = input.nextInt();
 
         calcAverage(nb1, nb2, nb3);
