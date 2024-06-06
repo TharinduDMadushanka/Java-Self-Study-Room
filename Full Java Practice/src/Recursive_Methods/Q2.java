@@ -14,6 +14,7 @@ public class Q2 {
         int num = input.nextInt();
 
         int sum = Sum.calcSum(num);
+        System.out.println("The sum of " + num + " is " + sum);
     }
     public class Sum{
         public static int calcSum(int n){
