@@ -74,7 +74,7 @@ class Woman implements Human{
 
     @Override
     public String showPeople() {
-        return "";
+        return gender +" "+ name ;
     }
 }
 class People{
