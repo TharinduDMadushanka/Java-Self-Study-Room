@@ -24,6 +24,24 @@ public class Q4 {
 
         System.out.println("\nNow deposit $100 to Savings Account.");
 
+        bank.deposit(savingsAccount,100);
+        bank.deposit(currentAccount,500);
+
+        System.out.println("Withdraw $150 from Savings Account.\n");
+        // Withdraw $150 from the SavingsAccount
+        bank.withdraw(savingsAccount, 150.0);
+        System.out.println("\nSavings A/c and Current A/c.:");
+
+        bank.printAccountBalances();
+
+        // Apply interest to the SavingsAccount
+        savingsAccount.applyInterest();
+        System.out.println("\nAfter applying interest on Savings A/c for 1 year:");
+        System.out.println("Savings A/c and Current A/c.:");
+
+        // Print the balances of all accounts in the bank after applying interest
+        bank.printAccountBalances();
+
     }
 }
 interface Account {
@@ -76,13 +94,13 @@ class CurrentAccount implements Account {
     public double getBalance() {
         return balance;
     }
-    public void setBalance(double overdraftLimit) {
+    public void setOverdraftLimit(double overdraftLimit) {
         this.overdraftLimit = overdraftLimit;
     }
 }
 class Bank {
     // Declare a private list to store accounts
-    private List accounts;
+    private List<Account> accounts;
 
     // Constructor for initializing the list of accounts
     public Bank() {
