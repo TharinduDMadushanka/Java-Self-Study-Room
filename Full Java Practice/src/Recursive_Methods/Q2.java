@@ -13,8 +13,9 @@ public class Q2 {
         System.out.print("Enter the number : ");
         int num = input.nextInt();
 
+        int sum = Sum.calcSum(num);
     }
-    public class calcSum{
+    public class Sum{
         public static int calcSum(int n){
             if(n==0){
                 return 0;
