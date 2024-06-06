@@ -11,13 +11,12 @@ public class Q4a {
 
         People p = new People();
         Man m = new Man("Male","Tharindu");
-
-        m.addPeople("Male","Dilshan");
+        Man m1 = new Man("Male","Dilshan");
+        p.addPeople(m1);
         p.addPeople(m);
         p.printInfo();
 
-        Woman w = new Woman("Female","Dulani");
-        p.addPeople(w);
+
     }
 }
 interface Human{
