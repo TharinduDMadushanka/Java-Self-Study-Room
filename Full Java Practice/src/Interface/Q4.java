@@ -37,4 +37,31 @@ class SavingsAccount implements Account {
     public double getBalance() {
         return balance;
     }
+
+    public void applyInterest() {
+        balance += balance * interestRate/100;
+    }
+}
+class CurrentAccount implements Account {
+    private double balance;
+    private double overdraftLimit;
+
+    public CurrentAccount(double balance, double overdraftLimit) {
+        this.balance = balance;
+        this.overdraftLimit = overdraftLimit;
+    }
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        balance -= amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+    public void setBalance(double overdraftLimit) {
+        this.overdraftLimit = overdraftLimit;
+    }
 }
