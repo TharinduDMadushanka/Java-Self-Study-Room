@@ -1,5 +1,8 @@
 package Interface;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Write a Java programming to create a banking system with three classes - Bank, Account, SavingsAccount, and CurrentAccount.
  * The bank should have a list of accounts and methods for adding them. Accounts should be an interface with methods to deposit,
@@ -63,5 +66,21 @@ class CurrentAccount implements Account {
     }
     public void setBalance(double overdraftLimit) {
         this.overdraftLimit = overdraftLimit;
+    }
+}
+class Bank{
+    private List accounts;
+
+    public Bank() {
+        accounts =new ArrayList();
+    }
+    public void addAccount(Account account) {
+        accounts.add(account);
+    }
+    public void removeAccount(Account account) {
+        accounts.remove(account);
+    }
+    public void deposit(Account account, double amount) {
+        account.deposit(amount);
     }
 }
