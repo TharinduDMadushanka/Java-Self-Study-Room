@@ -16,6 +16,10 @@ public class Q4a {
         p.addPeople(m);
         p.printInfo();
 
+        System.out.println();
+        p.addPeople(m);
+        p.printInfo();
+
         Woman w = new Woman("Female","Dulani");
         p.addPeople(w);
         p.printInfo();
