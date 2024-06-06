@@ -12,16 +12,17 @@ public class Q4a {
         People p = new People();
         Man m = new Man("Male","Tharindu");
 
+        m.addPeople("Male","Dilshan");
         p.addPeople(m);
         p.printInfo();
 
         Woman w = new Woman("Female","Dulani");
-
+        p.addPeople(w);
     }
 }
 interface Human{
-    void addPeople(String gender);
-    void removePeople(String gender);
+    void addPeople(String gender,String name);
+    void removePeople(String gender, String name);
     String showPeople();
 }
 class Man implements Human{
@@ -32,11 +33,14 @@ class Man implements Human{
         this.gender = gender;
         this.name = name;
     }
-    public void addPeople(String gender) {
+    public void addPeople(String gender, String name) {
         this.gender = gender;
+        this.name = name;
     }
-    public void removePeople(String gender) {
+
+    public void removePeople(String gender,String name) {
         this.gender = gender;
+        this.name = name;
     }
 
     @Override
@@ -54,13 +58,15 @@ class Woman implements Human{
     }
 
     @Override
-    public void addPeople(String gender) {
-
+    public void addPeople(String gender,String name) {
+        this.gender = gender;
+        this.name = name;
     }
 
     @Override
-    public void removePeople(String gender) {
-
+    public void removePeople(String gender,String name) {
+        this.gender = gender;
+        this.name = name;
     }
 
     @Override
