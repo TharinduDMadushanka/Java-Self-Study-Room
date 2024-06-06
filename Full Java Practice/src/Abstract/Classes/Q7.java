@@ -9,3 +9,12 @@ public class Q7 {
 
     }
 }
+abstract class Vehicle {
+    public abstract void startEngine();
+    public abstract void stopEngine();
+}
+class Car extends Vehicle {
+    public void startEngine() {
+        System.out.println("Car Engine Started");
+    }
+}
