@@ -9,6 +9,14 @@ import java.util.List;
 public class Q4a {
     public static void main(String[] args) {
 
+        People p = new People();
+        Man m = new Man("Male","Tharindu");
+
+        p.addPeople(m);
+        p.printInfo();
+
+        Woman w = new Woman("Female","Dulani");
+
     }
 }
 interface Human{
