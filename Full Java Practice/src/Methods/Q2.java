@@ -19,8 +19,10 @@ public class Q2 {
         System.out.println("Enter your third nb:");
         int nb3 = input.nextInt();
 
+        calcAverage(nb1, nb2, nb3);
+
     }
-    public void calcAverage(int nb1, int nb2, int nb3){
+    public static void calcAverage(int nb1, int nb2, int nb3){
 
         int sum=nb1+nb2+nb3;
         int avg=sum/3;
