@@ -73,4 +73,12 @@ class People{
     public void removePeople(Human human) {
         people.remove(human);
     }
+    public String showPeople() {
+        return people.toString();
+    }
+    public void printInfo(){
+        for(Human human : people){
+            System.out.println("People: " + human.showPeople());
+        }
+    }
 }
