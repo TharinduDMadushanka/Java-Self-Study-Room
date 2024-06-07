@@ -175,6 +175,7 @@ public class SchoolView extends javax.swing.JFrame {
 
     private void btnSave1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+        saveSchool();
     }
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {
