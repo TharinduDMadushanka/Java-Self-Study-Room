@@ -48,7 +48,7 @@ class Manager extends Employee{
         this.salary = salary;
         this.bonus = bonus;
     }
-    public double getSalary(){
+    public double calcSalary(){
         return salary+bonus;
     }
 }
@@ -61,7 +61,7 @@ class Developer extends Employee{
         this.salary = salary;
         this.ot=bonus;
     }
-    public double getSalary(){
+    public double calcSalary(){
         return salary+ot;
     }
 }
