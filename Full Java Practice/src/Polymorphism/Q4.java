@@ -7,6 +7,11 @@ package Polymorphism;
 public class Q4 {
     public static void main(String[] args) {
 
+        Employee e1 =new Manager("Tharindu",7500,1500);
+        Employee e2 =new Developer("Madushanka",7500,2000);
+
+        System.out.println("Manager "+e1.getName()+" "+e1.getRole()+" salary: "+e1.calcSalary());
+        System.out.println("Developer "+e2.getName()+" "+e2.getRole()+" salary: "+e2.calcSalary());
     }
 }
 class Employee{
