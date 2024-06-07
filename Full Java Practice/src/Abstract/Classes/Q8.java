@@ -9,3 +9,12 @@ public class Q8 {
 
     }
 }
+abstract class Person {
+    public abstract void eat();
+    public abstract void exercise();
+}
+class Athlete extends Person {
+    public void eat(){
+        System.out.println("Athlete eat healthy.");
+    }
+}
