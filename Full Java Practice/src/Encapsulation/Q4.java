@@ -13,19 +13,19 @@ public class Q4 {
         Scanner input =new Scanner(System.in);
         Employee e =new Employee();
 
-        System.out.println("Enter you id: ");
+        System.out.print("Enter you id: ");
         int id =input.nextInt();
         e.setId(id);
 
-        System.out.println("Enter your name: ");
+        System.out.print("Enter your name: ");
         String name=input.next();
         e.setName(name);
 
-        System.out.println("Enter your salary: ");
+        System.out.print("Enter your salary: ");
         double salary=input.nextDouble();
         e.setSalary(salary);
 
-
+        e.printInfo();
 
     }
 }
