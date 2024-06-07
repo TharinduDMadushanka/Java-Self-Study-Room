@@ -4,17 +4,24 @@
  */
 package view;
 
+import controller.SchoolController;
+import dto.SchoolDto;
+
+import java.sql.SQLException;
+
 /**
  *
  * @author ASUS
  */
 public class SchoolView extends javax.swing.JFrame {
+    private SchoolController schoolController;
 
     /**
      * Creates new form SchoolView
      */
-    public SchoolView() {
+    public SchoolView() throws Exception {
         initComponents();
+        schoolController=new SchoolController();
     }
 
     /**
@@ -225,4 +232,8 @@ public class SchoolView extends javax.swing.JFrame {
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtName;
     // End of variables declaration
+
+    private void saveSchool(){
+        SchoolDto dto=new SchoolDto(Integer.parseInt(txtId.getText()),txtName.getText(),txtAddress.getText(),txtCity.getText(),Integer.parseInt(txtContact.getText()));
+    }
 }
