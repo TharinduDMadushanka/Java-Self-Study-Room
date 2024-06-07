@@ -1,0 +1,27 @@
+package Conditional_Statement;
+
+import java.util.Scanner;
+
+/**
+ * Write a Java program that takes three numbers from the user and prints the greatest number
+ */
+public class Q3 {
+    public static void main(String[] args) {
+        Scanner input =new Scanner(System.in);
+
+        System.out.print("Enter nb 1:");
+        int nb1 = input.nextInt();
+
+        System.out.print("Enter nb 2:");
+        int nb2 = input.nextInt();
+
+        System.out.print("Enter nb 3:");
+        int nb3 = input.nextInt();
+    }
+    public static void findMax(int nb1, int nb2, int nb3){
+
+        int max=nb1;
+
+        if(nb2>nb){}
+    }
+}
