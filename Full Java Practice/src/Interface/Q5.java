@@ -9,6 +9,10 @@ public class Q5 {
 
         Rectangle1 r =new Rectangle1(100,150);
         r.printSize();
+
+        r.resizeHeight(500);
+        r.resizeWidth(600);
+        r.printSize();
     }
 }
 interface Resizable {
