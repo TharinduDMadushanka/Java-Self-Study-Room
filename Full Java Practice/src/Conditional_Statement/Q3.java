@@ -17,6 +17,8 @@ public class Q3 {
 
         System.out.print("Enter nb 3:");
         int nb3 = input.nextInt();
+
+        findMax(nb1,nb2,nb3);
     }
     public static void findMax(int nb1, int nb2, int nb3){
         int max;
