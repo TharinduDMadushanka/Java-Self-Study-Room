@@ -22,9 +22,8 @@ public class Q3 {
     }
     public static void findMax(int nb1, int nb2, int nb3){
         int max=nb1;
-        if(nb1 > nb2 && nb1 > nb3){
-            max = nb1;
-        }else if(nb2 > nb1 && nb2 > nb3){
+
+        if(nb2 > nb1 && nb2 > nb3){
             max = nb2;
         }else if(nb3 > nb1 && nb3 > nb2){
             max = nb3;
