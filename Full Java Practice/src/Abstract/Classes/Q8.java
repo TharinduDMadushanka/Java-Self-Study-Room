@@ -21,3 +21,11 @@ class Athlete extends Person {
         System.out.println("Athlete exercise everyday.");
     }
 }
+class LazyPerson extends Person {
+    public void eat(){
+        System.out.println("Lazy Person eat unhealthy.");
+    }
+    public void exercise(){
+        System.out.println("Lazy Person not exercise .");
+    }
+}
