@@ -46,5 +46,17 @@ class Manager extends Employee{
     public double getSalary(){
         return salary+bonus;
     }
+}
+class Developer extends Employee{
+    private double salary;
+    private double ot;
 
+    public Developer(String name,double salary, double bonus) {
+        super(name,"Developer");
+        this.salary = salary;
+        this.ot=bonus;
+    }
+    public double getSalary(){
+        return salary+ot;
+    }
 }
