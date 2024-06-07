@@ -11,15 +11,22 @@ public class Q4 {
     public static void main(String[] args) {
 
         Scanner input =new Scanner(System.in);
+        Employee e =new Employee();
 
         System.out.println("Enter you id: ");
         int id =input.nextInt();
+        e.setId(id);
 
         System.out.println("Enter your name: ");
         String name=input.next();
+        e.setName(name);
 
         System.out.println("Enter your salary: ");
         double salary=input.nextDouble();
+        e.setSalary(salary);
+
+
+
     }
 }
 class Employee{
@@ -44,5 +51,10 @@ class Employee{
     }
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+    public void printInfo(){
+        System.out.println("ID: "+id);
+        System.out.println("Name: "+name);
+        System.out.println("Salary: "+salary);
     }
 }
