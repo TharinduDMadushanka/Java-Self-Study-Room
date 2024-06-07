@@ -22,5 +22,7 @@ public class SchoolModel {
         statement.setString(3,schoolDto.getAddress());
         statement.setString(4,schoolDto.getCity());
         statement.setInt(5,schoolDto.getContact());
+
+        return statement.executeUpdate()>0?"success":"fail";
     }
 }
