@@ -17,4 +17,7 @@ class Athlete extends Person {
     public void eat(){
         System.out.println("Athlete eat healthy.");
     }
+    public void exercise(){
+        System.out.println("Athlete exercise everyday.");
+    }
 }
