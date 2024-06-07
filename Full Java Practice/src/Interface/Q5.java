@@ -7,18 +7,20 @@ package Interface;
 public class Q5 {
     public static void main(String[] args) {
 
+        Rectangle1 r =new Rectangle1(100,150);
+        r.printSize();
     }
 }
 interface Resizable {
     void resizeWidth(int width);
     void resizeHeight(int height);
 }
-class Rectangle implements Resizable {
+class Rectangle1 implements Resizable {
 
     private int width;
     private int height;
 
-    public Rectangle(int width, int height) {
+    public Rectangle1(int width, int height) {
         this.width = width;
         this.height = height;
     }
