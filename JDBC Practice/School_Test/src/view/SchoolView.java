@@ -242,6 +242,8 @@ public class SchoolView extends javax.swing.JFrame {
             System.out.println(resp);
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }

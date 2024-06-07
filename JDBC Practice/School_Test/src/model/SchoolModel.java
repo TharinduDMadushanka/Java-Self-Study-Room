@@ -13,8 +13,8 @@ public class SchoolModel {
     public SchoolModel() throws SQLException, ClassNotFoundException {
         this.connection= DBConnection.getInstance().getConnection();
     }
-    public String saveSchool(SchoolDto schoolDto) throws SQLException {
-        String sql="insert into school values(?,?,?,?,?)";
+    public String saveSchool(SchoolDto schoolDto) throws Exception {
+        String sql="INSERT INTO student VALUES(?,?,?,?,?)";
 
         PreparedStatement statement=connection.prepareStatement(sql);
         statement.setInt(1,schoolDto.getId());

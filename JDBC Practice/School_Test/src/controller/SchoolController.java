@@ -11,7 +11,7 @@ public class SchoolController {
     public SchoolController() throws SQLException, ClassNotFoundException {
         this.schoolModel=new SchoolModel();
     }
-    public String saveSchool(SchoolDto schoolDto) throws SQLException, ClassNotFoundException {
+    public String saveSchool(SchoolDto schoolDto) throws Exception {
         String resp=schoolModel.saveSchool(schoolDto);
         return resp;
     }
