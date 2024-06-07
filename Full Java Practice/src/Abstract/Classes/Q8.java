@@ -7,6 +7,14 @@ package Abstract.Classes;
 public class Q8 {
     public static void main(String[] args) {
 
+        Person athlete =new Athlete();
+        Person lazy=new LazyPerson();
+
+        athlete.eat();
+        athlete.exercise();
+
+        lazy.eat();
+        lazy.exercise();
     }
 }
 abstract class Person {
