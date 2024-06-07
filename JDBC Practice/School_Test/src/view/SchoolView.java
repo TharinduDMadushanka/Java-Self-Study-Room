@@ -235,5 +235,14 @@ public class SchoolView extends javax.swing.JFrame {
 
     private void saveSchool(){
         SchoolDto dto=new SchoolDto(Integer.parseInt(txtId.getText()),txtName.getText(),txtAddress.getText(),txtCity.getText(),Integer.parseInt(txtContact.getText()));
+
+        try {
+            String resp=schoolController.saveSchool(dto);
+            System.out.println(resp);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
