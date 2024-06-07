@@ -13,7 +13,7 @@ public class Q2 {
         System.out.print("Enter your measurement in inch:");
         double inch = input.nextDouble();
 
-        double meter = inch / 0.0254;
+        double meter = inch / 39.37;
 
         System.out.println("Your measurement in inch is " + meter);
     }
