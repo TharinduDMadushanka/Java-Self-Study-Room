@@ -12,6 +12,13 @@ public class Q3 {
         System.out.print("Enter an integer between 0 - 1000: ");
         int nb =input.nextInt();
 
+        int sum=0;
 
+        if (nb>0 && nb<1000) {
+            while (nb!=0) {
+                sum=sum+(nb%10);
+            }
+        }
+        System.out.println(sum);
     }
 }
