@@ -20,6 +20,6 @@ public class Q3 {
                 nb=nb/10;
             }
         }
-        System.out.println();
+        System.out.println("The sum of the digits is: "+sum);
     }
 }
