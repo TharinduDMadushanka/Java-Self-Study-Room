@@ -23,8 +23,13 @@ public class Q3 {
             for (int i = 0; i < chars.length/2; i+=2){
                 i=chars.length/2-1;
                 System.out.println(chars[i]);
+                System.out.println(chars[i+1]);
+            }
+        }else {
+            for (int i = 0; i < chars.length/2; i++) {
+                i=chars.length/2;
+                System.out.println(chars[i]);
             }
         }
-
     }
 }
