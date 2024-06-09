@@ -17,8 +17,9 @@ public class Q3 {
         if (nb>0 && nb<1000) {
             while (nb!=0) {
                 sum=sum+(nb%10);
+                nb=nb/10;
             }
         }
-        System.out.println(sum);
+        System.out.println();
     }
 }
