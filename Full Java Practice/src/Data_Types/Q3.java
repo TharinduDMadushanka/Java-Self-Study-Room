@@ -21,5 +21,16 @@ public class Q3 {
             }
         }
         System.out.println("The sum of the digits is: "+sum);
+
+
+//        int firstDigit = nb % 10;
+//        int remainingNumber = nb / 10;
+//        int SecondDigit = remainingNumber % 10;
+//        remainingNumber = remainingNumber / 10;
+//        int thirdDigit = remainingNumber % 10;
+//        remainingNumber = remainingNumber / 10;
+//        int fourthDigit = remainingNumber % 10;
+//        int sum2 = thirdDigit + SecondDigit + firstDigit + fourthDigit;
+//        System.out.println("The sum of all digits in " + nb + " is " + sum2);
     }
 }
