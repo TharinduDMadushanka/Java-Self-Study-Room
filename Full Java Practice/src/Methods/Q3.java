@@ -13,7 +13,11 @@ public class Q3 {
         System.out.print("Enter a string: ");
         String word = input.nextLine();
 
+        char[] chars = word.toCharArray();
 
+        for (int i = 0; i < chars.length; i++) {
+            System.out.print(chars[i]+", ");
+        }
 
     }
 }
