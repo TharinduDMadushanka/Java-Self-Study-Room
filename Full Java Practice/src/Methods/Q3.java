@@ -21,7 +21,8 @@ public class Q3 {
 
         if (chars.length%2==0){
             for (int i = 0; i < chars.length/2; i+=2){
-                i=chars.length/2;
+                i=chars.length/2-1;
+                System.out.println(chars[i]);
             }
         }
 
