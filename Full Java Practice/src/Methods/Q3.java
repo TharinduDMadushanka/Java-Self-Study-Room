@@ -13,11 +13,12 @@ public class Q3 {
         System.out.print("Enter a string: ");
         String word = input.nextLine();
 
-        char[] chars = word.toCharArray();
+        checkMiddle(word);
 
-//        for (int i = 0; i < chars.length; i++) {
-//            System.out.print(chars[i]+", ");
-//        }
+    }
+    public static void checkMiddle(String word){
+
+        char[] chars = word.toCharArray();
 
         if (chars.length%2==0){
             for (int i = 0; i < chars.length/2; i+=2){

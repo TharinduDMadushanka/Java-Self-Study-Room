@@ -11,5 +11,7 @@ public class Q3 {
 
         System.out.print("Enter an integer between 0 - 1000: ");
         int nb =input.nextInt();
+
+
     }
 }
