@@ -19,9 +19,10 @@ public class Q3 {
 //            System.out.print(chars[i]+", ");
 //        }
 
-        for (int i = 0; i < chars.length/2; i++) {
-            i=chars.length/2;
-            System.out.println(chars[i]);
+        if (chars.length%2==0){
+            for (int i = 0; i < chars.length/2; i+=2){
+                i=chars.length/2;
+            }
         }
 
     }
