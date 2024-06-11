@@ -14,7 +14,7 @@ public class Main {
 }
 class Bike{
     void run(){
-        System.out.println("Bike is running");
+        //System.out.println("Bike is running");
     }
         }
 class yamaha extends Bike{
