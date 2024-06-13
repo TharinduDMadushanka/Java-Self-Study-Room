@@ -13,12 +13,18 @@ public class Q5 {
         System.out.print("Enter number between 1 and 7: ");
         int nb = input.nextInt();
 
-        String[] arr ={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+        //String[] arr ={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
 
-        int length=arr[nb-1].length();
-
-        for (int i = 0; i <length ; i++) {
-            System.out.println(arr[nb-1]);
+        String dayName = "";
+        switch (nb) {
+            case 1: dayName = "Monday"; break;
+            case 2: dayName = "Tuesday"; break;
+            case 3: dayName = "Wednesday"; break;
+            case 4: dayName = "Thursday"; break;
+            case 5: dayName = "Friday"; break;
+            case 6: dayName = "Saturday"; break;
+            case 7: dayName = "Sunday"; break;
+            default:dayName = "Invalid day range";
         }
     }
 }
