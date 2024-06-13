@@ -14,6 +14,7 @@ public class Q4 {
         System.out.print("Enter a word: ");
         String word = input.nextLine();
 
+        calcVowels(word);
 
     }
     public static void calcVowels(String word) {
