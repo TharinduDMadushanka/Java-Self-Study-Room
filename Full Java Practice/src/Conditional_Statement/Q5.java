@@ -26,5 +26,6 @@ public class Q5 {
             case 7: dayName = "Sunday"; break;
             default:dayName = "Invalid day range";
         }
+        System.out.println(dayName);
     }
 }
