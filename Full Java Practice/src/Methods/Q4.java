@@ -14,7 +14,7 @@ public class Q4 {
         System.out.print("Enter a word: ");
         String word = input.nextLine();
 
-        calcVowels(word);
+        calcVowels(word.toLowerCase());
 
     }
     public static void calcVowels(String word) {
