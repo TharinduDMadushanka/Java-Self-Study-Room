@@ -15,6 +15,11 @@ public class Q5 {
 
         String[] arr ={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
 
+        for (int i = 0; i < nb; i++) {
+            if (nb == Integer.parseInt(arr[i])) {
+                System.out.println(arr[i]);
+            }
+        }
 
     }
 }
