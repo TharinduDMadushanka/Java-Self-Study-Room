@@ -12,5 +12,9 @@ public class Q5 {
 
         System.out.println("Enter number between 1 and 7");
         int nb = input.nextInt();
+
+        String[] arr ={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+
+
     }
 }
