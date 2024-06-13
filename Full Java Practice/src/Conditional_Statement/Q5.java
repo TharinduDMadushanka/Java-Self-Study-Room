@@ -10,16 +10,13 @@ public class Q5 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter number between 1 and 7");
+        System.out.print("Enter number between 1 and 7: ");
         int nb = input.nextInt();
 
         String[] arr ={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
 
         for (int i = 0; i < nb; i++) {
-            if (nb == Integer.parseInt(arr[i])) {
-                System.out.println(arr[i]);
-            }
+            System.out.println(arr[nb-1]);
         }
-
     }
 }
