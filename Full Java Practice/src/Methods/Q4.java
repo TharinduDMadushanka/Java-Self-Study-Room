@@ -14,11 +14,14 @@ public class Q4 {
         System.out.print("Enter a word: ");
         String word = input.nextLine();
 
+
+    }
+    public static void calcVowels(String word) {
+
         char[] arr = word.toCharArray();
 
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
-
     }
 }
