@@ -15,7 +15,9 @@ public class Q5 {
 
         String[] arr ={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
 
-        for (int i = 0; i < nb; i++) {
+        int length=arr[nb-1].length();
+
+        for (int i = 0; i <length ; i++) {
             System.out.println(arr[nb-1]);
         }
     }
