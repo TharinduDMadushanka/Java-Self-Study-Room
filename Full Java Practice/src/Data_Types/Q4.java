@@ -13,5 +13,8 @@ public class Q4 {
         System.out.print("Enter the number of minutes: ");
         double minutes = input.nextDouble();
 
+        double years = minutes / 525600;
+
+        System.out.println("The years is " + years);
     }
 }
