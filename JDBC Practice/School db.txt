@@ -1,0 +1,20 @@
+CREATE DATABASE testSchool;
+SHOW DATABASE;
+USE school;
+
+CREATE TABLE IF NOT EXISTS student(
+	
+	id INT ,
+	name VARCHAR(45) NOT NULL,
+	address VARCHAR(45),
+	city VARCHAR(45),
+	contact INT
+	
+);
+
+SHOW TABLES;
+DESC student;
+
+INSERT INTO student VALUES(01,"Tharindu","Galle Road","Galle",0762791821);
+
+SELECT * FROM student;
