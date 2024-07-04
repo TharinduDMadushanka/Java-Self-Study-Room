@@ -17,6 +17,7 @@ import javax.swing.table.DefaultTableModel;
 public class CustomerView extends javax.swing.JFrame {
 
 
+
     /**
      * Creates new form CustomerView
      */
