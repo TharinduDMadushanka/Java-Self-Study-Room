@@ -4,6 +4,9 @@
  */
 package edu.practice.view;
 
+import edu.practice.controller.CustomerController;
+import edu.practice.dto.CustomerDto;
+
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,15 +19,15 @@ import javax.swing.table.DefaultTableModel;
  */
 public class CustomerView extends javax.swing.JFrame {
 
-
+    private CustomerController customerController;
 
     /**
      * Creates new form CustomerView
      */
     public CustomerView() throws Exception {
         initComponents();
-
-        //loadTable();
+        customerController = new CustomerController();
+        loadTable();
     }
 
     /**
@@ -305,22 +308,22 @@ public class CustomerView extends javax.swing.JFrame {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        //saveCustomer();
+        saveCustomer();
     }
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        //deleteCustomer();
+        deleteCustomer();
     }
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        //updateCustomer();
+        updateCustomer();
     }
 
     private void tblCustomerMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
-        //searchCustomer();
+        searchCustomer();
     }
 
     /**
@@ -385,124 +388,124 @@ public class CustomerView extends javax.swing.JFrame {
     private javax.swing.JTextField txtTitle;
     // End of variables declaration
 
-//    private void saveCustomer(){
-//
-//        CustomerDto dto= new CustomerDto(txtId1.getText(),txtTitle.getText(),txtName.getText(),txtDob.getText(),
-//                Double.parseDouble(txtSalary.getText()),txtAddress.getText(),txtCity.getText(),txtProvince.getText(),
-//                txtPostal.getText());
-//
-//        try {
-//            String resp =customerController.saveCustomer(dto);
-//            JOptionPane.showMessageDialog(this, resp);
-//            clearForm();
-//            loadTable(); //after saving load and update the table
-//        } catch (Exception ex) {
-//            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
-//            JOptionPane.showMessageDialog(this, "Error at save data.");
-//        }
-//    }
-//    //Clear form after saving data
-//
-//    private void clearForm(){
-//        txtId1.setText("");
-//        txtTitle.setText("");
-//        txtName.setText("");
-//        txtDob.setText("");
-//        txtSalary.setText("");
-//        txtAddress.setText("");
-//        txtCity.setText("");
-//        txtProvince.setText("");
-//        txtPostal.setText("");
-//    }
-//
-//    // show all data in db
-//    private void loadTable(){
-//
-//        try {
-//            String [] columns={"CID","Title","Name","DOB","Salary","Address","City","Province","Post Code"};
-//            DefaultTableModel dtm =new DefaultTableModel(columns,0){
-//
-//                @Override
-//                public boolean isCellEditable(int row,int column){// table rows editable disconnect
-//                    return false;
-//                }
-//            };
-//            tblCustomer.setModel(dtm);
-//
-//            ArrayList<CustomerDto> customerDtos=customerController.getAllCustomer();
-//            for(CustomerDto dto: customerDtos){
-//                Object[] rowData ={dto.getId(),dto.getTitle(),dto.getName(),dto.getDob(),dto.getSalary(),dto.getAddress(),dto.getCity(),dto.getProvince(),dto.getPostal()};
-//                dtm.addRow(rowData);
-//            }
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(this, "Error at Loading Data to Customer Table");
-//        }
-//    }
-//
-//    // show clicked data row
-//    private void searchCustomer(){
-//
-//        try {
-//
-//            String custId=tblCustomer.getValueAt(tblCustomer.getSelectedRow(), 0).toString();
-//            CustomerDto dto =customerController.searchCustomer(custId);
-//
-//            if (dto!=null) {
-//                txtId1.setText(dto.getId());
-//                txtTitle.setText(dto.getTitle());
-//                txtName.setText(dto.getName());
-//                txtDob.setText(dto.getDob());
-//                txtSalary.setText(Double.toString(dto.getSalary()));
-//                txtAddress.setText(dto.getAddress());
-//                txtCity.setText(dto.getCity());
-//                txtProvince.setText(dto.getProvince());
-//                txtPostal.setText(dto.getPostal());
-//            }else{
-//                JOptionPane.showMessageDialog(this, "Customer Not Found");
-//            }
-//
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(this, "Error at loading Customer");
-//        }
-//    }
-//
-//    private void deleteCustomer(){
-//
-//        try {
-//
-//            String custId=txtId1.getText();
-//            if(custId.isEmpty()){
-//                JOptionPane.showMessageDialog(this,"Please Enter Customer Id to delete");
-//                return;
-//            }
-//
-//            String resp=customerController.deleteCustomer(custId);
-//            JOptionPane.showMessageDialog(this, resp);
-//            clearForm();
-//            loadTable(); // after deleting, load and update the table
-//
-//        } catch (Exception ex) {
-//            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
-//            JOptionPane.showMessageDialog(this, "Error at delete Data.");
-//        }
-//    }
-//
-//    private void updateCustomer(){
-//
-//        try {
-//            CustomerDto dto= new CustomerDto(txtId1.getText(),txtTitle.getText(),txtName.getText(),txtDob.getText(),
-//                    Double.parseDouble(txtSalary.getText()),txtAddress.getText(),txtCity.getText(),txtProvince.getText(),
-//                    txtPostal.getText());
-//
-//            String resp=customerController.updateCustomer(dto);
-//            JOptionPane.showMessageDialog(this, resp);
-//            loadTable();
-//            clearForm();
-//
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(this, "Error at update Customer.");
-//        }
-//    }
+    private void saveCustomer(){
+
+        CustomerDto dto= new CustomerDto(txtId1.getText(),txtTitle.getText(),txtName.getText(),txtDob.getText(),
+                Double.parseDouble(txtSalary.getText()),txtAddress.getText(),txtCity.getText(),txtProvince.getText(),
+                txtPostal.getText());
+
+        try {
+            String resp =customerController.saveCustomer(dto);
+            JOptionPane.showMessageDialog(this, resp);
+            clearForm();
+            loadTable(); //after saving load and update the table
+        } catch (Exception ex) {
+            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, "Error at save data.");
+        }
+    }
+    //Clear form after saving data
+
+    private void clearForm(){
+        txtId1.setText("");
+        txtTitle.setText("");
+        txtName.setText("");
+        txtDob.setText("");
+        txtSalary.setText("");
+        txtAddress.setText("");
+        txtCity.setText("");
+        txtProvince.setText("");
+        txtPostal.setText("");
+    }
+
+    // show all data in db
+    private void loadTable(){
+
+        try {
+            String [] columns={"CID","Title","Name","DOB","Salary","Address","City","Province","Post Code"};
+            DefaultTableModel dtm =new DefaultTableModel(columns,0){
+
+                @Override
+                public boolean isCellEditable(int row,int column){// table rows editable disconnect
+                    return false;
+                }
+            };
+            tblCustomer.setModel(dtm);
+
+            ArrayList<CustomerDto> customerDtos=customerController.getAllCustomer();
+            for(CustomerDto dto: customerDtos){
+                Object[] rowData ={dto.getId(),dto.getTitle(),dto.getName(),dto.getDob(),dto.getSalary(),dto.getAddress(),dto.getCity(),dto.getProvince(),dto.getPostal()};
+                dtm.addRow(rowData);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error at Loading Data to Customer Table");
+        }
+    }
+
+    // show clicked data row
+    private void searchCustomer(){
+
+        try {
+
+            String custId=tblCustomer.getValueAt(tblCustomer.getSelectedRow(), 0).toString();
+            CustomerDto dto =customerController.getCustomer(custId);
+
+            if (dto!=null) {
+                txtId1.setText(dto.getId());
+                txtTitle.setText(dto.getTitle());
+                txtName.setText(dto.getName());
+                txtDob.setText(dto.getDob());
+                txtSalary.setText(Double.toString(dto.getSalary()));
+                txtAddress.setText(dto.getAddress());
+                txtCity.setText(dto.getCity());
+                txtProvince.setText(dto.getProvince());
+                txtPostal.setText(dto.getPostal());
+            }else{
+                JOptionPane.showMessageDialog(this, "Customer Not Found");
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error at loading Customer");
+        }
+    }
+
+    private void deleteCustomer(){
+
+        try {
+
+            String custId=txtId1.getText();
+            if(custId.isEmpty()){
+                JOptionPane.showMessageDialog(this,"Please Enter Customer Id to delete");
+                return;
+            }
+
+            String resp=customerController.deleteCustomer(custId);
+            JOptionPane.showMessageDialog(this, resp);
+            clearForm();
+            loadTable(); // after deleting, load and update the table
+
+        } catch (Exception ex) {
+            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, "Error at delete Data.");
+        }
+    }
+
+    private void updateCustomer(){
+
+        try {
+            CustomerDto dto= new CustomerDto(txtId1.getText(),txtTitle.getText(),txtName.getText(),txtDob.getText(),
+                    Double.parseDouble(txtSalary.getText()),txtAddress.getText(),txtCity.getText(),txtProvince.getText(),
+                    txtPostal.getText());
+
+            String resp=customerController.updateCustomer(dto);
+            JOptionPane.showMessageDialog(this, resp);
+            loadTable();
+            clearForm();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error at update Customer.");
+        }
+    }
 }
 
 
