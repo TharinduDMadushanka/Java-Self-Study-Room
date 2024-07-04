@@ -34,6 +34,7 @@ public class ItemServiceImpl implements ItemService {
         if (entity != null) {
             return getitemDto(entity);
         }
+        return null;
     }
 
     @Override
