@@ -27,7 +27,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public CustomerEntity get(String id) throws Exception {
-        ResultSet rst = CrudUtil.executeQuery("SELECT * FROM customer WHERE CustID = ?",id);
+        ResultSet rst = CrudUtil.executeQuery("SELECT * FROM customer WHERE CustID = ?", id);
         if(rst.next()){
             CustomerEntity customerEntity = new CustomerEntity(
                     rst.getString("CustID"),
@@ -38,20 +38,20 @@ public class CustomerDaoImpl implements CustomerDao {
                     rst.getString("CustAddress"),
                     rst.getString("City"),
                     rst.getString("Province"),
-                    rst.getString("PostalCode")
-            );
+                    rst.getString("PostalCode"));
             return customerEntity;
         }
         return null;
+
     }
 
     @Override
     public ArrayList<CustomerEntity> getAll() throws Exception {
-        ArrayList<CustomerEntity> customerEntities = new ArrayList<>();
+        ArrayList<CustomerEntity> customerEntitys = new ArrayList<>();
         ResultSet rst = CrudUtil.executeQuery("SELECT * FROM customer");
 
         while(rst.next()){
-            CustomerEntity customerEntity = new CustomerEntity(
+            CustomerEntity entity = new CustomerEntity(
                     rst.getString("CustID"),
                     rst.getString("CustTitle"),
                     rst.getString("CustName"),
@@ -60,10 +60,10 @@ public class CustomerDaoImpl implements CustomerDao {
                     rst.getString("CustAddress"),
                     rst.getString("City"),
                     rst.getString("Province"),
-                    rst.getString("PostalCode")
-            );
-            return customerEntities;
+                    rst.getString("PostalCode"));
+
+            customerEntitys.add(entity);
         }
-        return null;
+        return customerEntitys;
     }
 }
