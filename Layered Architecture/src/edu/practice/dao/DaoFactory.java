@@ -1,6 +1,7 @@
 package edu.practice.dao;
 
 import edu.practice.dao.custom.ItemDao;
+import edu.practice.dao.custom.impl.CustomerDaoImpl;
 import edu.practice.dao.custom.impl.ItemDaoImpl;
 
 public class DaoFactory {
@@ -19,6 +20,8 @@ public class DaoFactory {
         switch (type) {
             case ITEM:
                 return new ItemDaoImpl();
+            case CUSTOMER:
+                return new CustomerDaoImpl();
             default:
                 return null;
         }
