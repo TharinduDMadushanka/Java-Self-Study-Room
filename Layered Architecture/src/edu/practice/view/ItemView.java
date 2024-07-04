@@ -4,8 +4,12 @@
  */
 package edu.practice.view;
 
+import edu.practice.controller.ItemController;
+import edu.practice.dto.ItemDto;
+
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,12 +17,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ItemView extends javax.swing.JFrame {
 
+    private ItemController itemController;
     /**
      * Creates new form ItemView
      */
     public ItemView() throws Exception {
         initComponents();
-        //loadTable();
+        itemController = new ItemController();
+        loadTable();
     }
 
     /**
@@ -225,17 +231,17 @@ public class ItemView extends javax.swing.JFrame {
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        //updateItem();
+        updateItem();
     }
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        //deleteItem();
+        deleteItem();
     }
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        //saveItem();
+        saveItem();
     }
 
     private void txtPackActionPerformed(java.awt.event.ActionEvent evt) {
@@ -244,7 +250,7 @@ public class ItemView extends javax.swing.JFrame {
 
     private void tblItemMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
-        //searchItem();
+        searchItem();
     }
 
     /**
@@ -302,93 +308,95 @@ public class ItemView extends javax.swing.JFrame {
     // End of variables declaration
 
     // Save data
-//    private void saveItem() {
-//        try {
-//            ItemDto dto = new ItemDto(txtCode.getText(), txtDescription.getText(), txtPack.getText(), Integer.parseInt(txtQoh.getText()), Double.parseDouble(txtUnitprice.getText()));
-//            String resp = itemController.save(dto);
-//            JOptionPane.showMessageDialog(this, resp);
-//            clearForm();
-//            loadTable();
-//        } catch (Exception ex) {
-//            JOptionPane.showMessageDialog(this, "Error at save data");
-//        }
-//
-//    }
-//
-//    // clear form after saving data
-//    private void clearForm() {
-//        txtCode.setText("");
-//        txtDescription.setText("");
-//        txtPack.setText("");
-//        txtQoh.setText("");
-//        txtUnitprice.setText("");
-//    }
-//
-//    // show all data in db
-//    private void loadTable() {
-//        try {
-//            String columns[] = {"Item Id", "Item Description", "Pack Size", "Unit Price", "QoH"};
-//            DefaultTableModel dtm = new DefaultTableModel(columns, 0) {
-//                @Override
-//                public boolean isCellEditable(int row, int column) {
-//                    return false;
-//                }
-//            };
-//            tblItem.setModel(dtm);
-//
-//            ArrayList<ItemDto> itemDtos = itemController.getAll();
-//            for (ItemDto dto : itemDtos) {
-//                Object[] rowData = {dto.getItemCode(), dto.getDescription(), dto.getPack(), dto.getUnitPrice(), dto.getQoh()};
-//                dtm.addRow(rowData);
-//            }
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(this, "Error at Loading Data to Item Table");
-//        }
-//    }
-//
-//    private void searchItem() {
-//        try {
-//            String itemId = tblItem.getValueAt(tblItem.getSelectedRow(), 0).toString();
-//            ItemDto dto = itemController.get(itemId);
-//
-//            if (dto != null) {
-//                txtCode.setText(dto.getItemCode());
-//                txtDescription.setText(dto.getDescription());
-//                txtPack.setText(dto.getPack());
-//                txtUnitprice.setText(Double.toString(dto.getUnitPrice()));
-//                txtQoh.setText(Integer.toString(dto.getQoh()));
-//            } else {
-//                JOptionPane.showMessageDialog(this, "Item Not Found");
-//            }
-//
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(this, "Error at loading Item");
-//        }
-//    }
-//
-//    private void deleteItem(){
-//        try {
-//            String itemCode = txtCode.getText();
-//            String resp = itemController.delete(itemCode);
-//            JOptionPane.showMessageDialog(this, resp);
-//            clearForm();
-//            loadTable();
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(this, "Error at Delete Item");
-//        }
-//    }
-//
-//    private void updateItem() {
-//        try {
-//            ItemDto itemDto = new ItemDto(txtCode.getText() ,txtDescription.getText(), txtPack.getText(), Integer.parseInt(txtQoh.getText()) , Double.parseDouble(txtUnitprice.getText()));
-//            String resp = itemController.update(itemDto);
-//            JOptionPane.showMessageDialog(this, resp);
-//            loadTable();
-//            clearForm();
-//
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(this, "Error at update Item");
-//        }
-//    }
+    private void saveItem() {
+        try {
+            ItemDto dto = new ItemDto(txtCode.getText(),txtDescription.getText(),txtPack.getText(),Double.parseDouble(txtUnitprice.getText()),
+                    Integer.parseInt(txtQoh.getText()));
+            String resp = itemController.saveItem(dto);
+            JOptionPane.showMessageDialog(this, resp);
+            clearForm();
+            loadTable();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error at save data");
+        }
+
+    }
+
+    // clear form after saving data
+    private void clearForm() {
+        txtCode.setText("");
+        txtDescription.setText("");
+        txtPack.setText("");
+        txtQoh.setText("");
+        txtUnitprice.setText("");
+    }
+
+    // show all data in db
+    private void loadTable() {
+        try {
+            String columns[] = {"Item Id", "Item Description", "Pack Size", "Unit Price", "QoH"};
+            DefaultTableModel dtm = new DefaultTableModel(columns, 0) {
+                @Override
+                public boolean isCellEditable(int row, int column) {
+                    return false;
+                }
+            };
+            tblItem.setModel(dtm);
+
+            ArrayList<ItemDto> itemDtos = itemController.getAllItems();
+            for (ItemDto dto : itemDtos) {
+                Object[] rowData = {dto.getItemCode(), dto.getDescription(), dto.getPackSize(), dto.getUnitPrice(), dto.getQoh()};
+                dtm.addRow(rowData);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error at Loading Data to Item Table");
+        }
+    }
+
+    private void searchItem() {
+        try {
+            String itemId = tblItem.getValueAt(tblItem.getSelectedRow(), 0).toString();
+            ItemDto dto = itemController.getItem(itemId);
+
+            if (dto != null) {
+                txtCode.setText(dto.getItemCode());
+                txtDescription.setText(dto.getDescription());
+                txtPack.setText(dto.getPackSize());
+                txtUnitprice.setText(Double.toString(dto.getUnitPrice()));
+                txtQoh.setText(Integer.toString(dto.getQoh()));
+            } else {
+                JOptionPane.showMessageDialog(this, "Item Not Found");
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error at loading Item");
+        }
+    }
+
+    private void deleteItem(){
+        try {
+            String itemCode = txtCode.getText();
+            String resp = itemController.deleteItem(itemCode);
+            JOptionPane.showMessageDialog(this, resp);
+            clearForm();
+            loadTable();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error at Delete Item");
+        }
+    }
+
+    private void updateItem() {
+        try {
+            ItemDto dto = new ItemDto(txtCode.getText(),txtDescription.getText(),txtPack.getText(),Double.parseDouble(txtUnitprice.getText()),
+                    Integer.parseInt(txtQoh.getText()));
+            String resp = itemController.updateItem(dto);
+            JOptionPane.showMessageDialog(this, resp);
+            loadTable();
+            clearForm();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error at update Item");
+        }
+    }
 }
 
