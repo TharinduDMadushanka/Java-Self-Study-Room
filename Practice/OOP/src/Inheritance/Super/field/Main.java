@@ -1,4 +1,4 @@
-package Inheritance.Super.basic.field;
+package Inheritance.Super.field;
 
 class Animal {
     protected String name = "Unnamed Animal";
