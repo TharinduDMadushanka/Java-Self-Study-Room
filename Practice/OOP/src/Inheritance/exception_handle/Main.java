@@ -21,7 +21,7 @@ public class Main {
             Animal animal = new Dog();
             animal.makeSound();
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
     }
 }
