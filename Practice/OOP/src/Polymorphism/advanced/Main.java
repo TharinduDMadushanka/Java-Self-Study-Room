@@ -21,3 +21,7 @@ public class Main {
     }
 }
 
+/**
+ * When overriding a method, the return type can be a subclass of the return type declared in the superclass method.
+ * Explanation: The getAnimal() method in the Dog class returns a Dog object, demonstrating covariant return types.
+ */
