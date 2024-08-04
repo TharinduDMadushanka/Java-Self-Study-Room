@@ -7,7 +7,7 @@ public interface Animal {
     
     void makeSound(); // Abstract method
     abstract void eat();
-    String getSound(); //Abstract method
+    String getSound(String a); //Abstract method
 
     default void sing() {
 
