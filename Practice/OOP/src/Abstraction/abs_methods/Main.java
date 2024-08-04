@@ -2,12 +2,15 @@ package Abstraction.abs_methods;
 
 abstract class Shape {
 
-    int a;
+    int a =10;
+
     // Abstract method
     public abstract void draw();
 
     public static void eat() {
+        int a =10;
         System.out.println("ffffff");
+        System.out.println(a);
     }
 }
 
