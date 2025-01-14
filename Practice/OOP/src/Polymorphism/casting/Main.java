@@ -15,7 +15,7 @@ class Dog extends Animal {
 public class Main {
     public static void main(String[] args) {
         Animal myAnimal = new Dog(); // Upcasting
-        myAnimal.makeSound(); // Dog barks.
+        myAnimal.makeSound(); // Animal makes a sound.
 
         Dog myDog = (Dog) myAnimal; // Down casting
         myDog.bark(); // Dog barks.

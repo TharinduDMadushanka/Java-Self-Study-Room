@@ -33,5 +33,6 @@ public class Main {
         Shark shark = new Shark();
         shark.swim(); // Shark swims fast.
         shark.eat();  // This fish eats.
+        shark.bark();
     }
 }

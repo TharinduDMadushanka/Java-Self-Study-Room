@@ -23,6 +23,7 @@ public class Main {
         Dog dog = new Dog();
         dog.eat();  // Inherited method from Animal class
         dog.bark(); // Method from Dog class
+        dog.sleep();
     }
 }
 
